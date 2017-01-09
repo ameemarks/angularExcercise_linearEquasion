@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>linear equation solver</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+
+    <script src='app/main.js'></script>
+
+    <!--<script src="https://code.highcharts.com/highcharts.js"></script>-->
+    <!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>-->
+
+
+</head>
+<body ng-app="MainController">
+    <div class="container" ng-controller="formController">
+        <h1>Linear equasion solver</h1>
+        <div class="inputs">
+            <form name="form" class="form" ng-submit="update(value)" novalidate> <!-- ng-controller="formController as formCtrl"
+                                            ng-submit="form.$valid && formCtrl.update(value)" -->
+                <fieldset>
+                    <label>A value:</label>
+                    <input class="input_number" type="number" name="aValue" placeholder="type a number" ng-model="value.a" required/>
+                    <div ng-show="form.aValue.$touched">
+                        <span ng-show="form.aValue.$error.required" class="error_communicate">Fill in "A value" field</span>
+                        <span ng-show="form.aValue.$error.number" class="error_communicate">Give us a number (eg. -16, 0, 48.53)</span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <label>B value:</label>
+                    <input class="input_number" type="number" name="bValue" placeholder="type a number" ng-model="value.b" required/>
+                    <div ng-show="form.bValue.$touched">
+                        <span ng-show="form.bValue.$error.required" class="error_communicate">Fill in "B value" field</span>
+                        <span ng-show="form.bValue.$error.number" class="error_communicate">Give us a number (eg. -1.25, 0, 94)</span>
+                    </div>
+                </fieldset>
+
+                <div class="empty_communicate">
+                    {{ unfilled }}
+                </div>
+
+                <fieldset>
+                    <button class="button" type="reset" ng-click="reset()">Reset</button>
+                    <input class="button" type="submit" value="Calculate" ng-click="items.push('1')" id="calc"/>
+                </fieldset>
+
+            </form>
+
+            <h2 class="changing-animation" animate-on-change="items"> {{equasion}} </h2>
+
+        </div>
+
+        <!--<div class="chart"></div>-->
+
+        <!--<hc-chart options="chartOptions"></hc-chart>-->
+
+
+        <div class="equasion_description">
+            <h3>Result in textual descriptive form:</h3>
+            <span> {{monotonicity}} function; zero of function at point: {{ point0 }} </span>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>

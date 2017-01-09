@@ -1,0 +1,213 @@
+body {
+    margin: 0 20%;
+    background-color: #eeede8;
+}
+
+.container {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    font-size: 30px;
+}
+
+/* animation of the background on EQUASION when "submit" is clicked */
+.changing-animation {
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    background-color: white;
+}
+
+.changing-animation.on {
+    background-color: #fea521;
+}
+
+h1, h2, h3 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    padding: 30px 0;
+}
+
+h2 {
+    font-size: 40px;
+    border: 2px solid #fea521;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 30px 0;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: left;
+    padding: 10px 0;
+}
+
+fieldset {
+    border: none;
+    padding: 10px 30px;
+}
+
+fieldset label {
+    font-size: 20px;
+}
+
+.input_number {
+    font-size: 20px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* red border on inputs when filled with invalid values */
+.form input.ng-invalid.ng-touched {
+    border: 1px solid #ca0b03;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+fieldset div {
+    display: inline-block;
+}
+
+.button {
+    height: 35px;
+    padding: 0 30px;
+    font-size: 20px;
+    border: 1px solid #fed20c;
+    border-radius: 5px;
+    background-color: #fed20c;
+    /*color: white;*/
+}
+
+.button:nth-child(2) {
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #fea521;
+    border: 1px solid #fea521;
+}
+
+.error_communicate {
+    color: #ca0b03;
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.empty_communicate {
+    color: #fea521;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 30px;
+    height: 30px;
+}
+
+.equasion_description {
+    margin-top: 30px;
+}
+
+.equasion_description span {
+    display: block;
+    border: 2px solid #fed20c;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 25px;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1210px) {
+    body {
+        margin: 0 15%;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    body {
+        margin: 0 10%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    body {
+        margin: 0 5%;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    body {
+        margin: 0 5%;
+    }
+
+    form {
+        text-align: center;
+    }
+
+    fieldset {
+        height: 60px;
+    }
+
+    fieldset div {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .equasion_description span {
+        font-size: 20px;
+        padding: 10px 5px;
+    }
+
+    .empty_communicate {
+        padding: 10px 0 0;
+        height: 24px;
+    }
+
+}
+
+@media screen and (max-width: 610px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .error_communicate {
+        font-size: 17px;
+    }
+
+    fieldset {
+        padding: 0;
+        height: 105px;
+    }
+
+    fieldset:last-child {
+        height: 50px;
+    }
+}
